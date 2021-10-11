@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,6 +19,13 @@
                 <img src="img/logo.svg" alt="logo">
             </a>
             <nav class="nav">
+                <button class="m-menu">
+                    <svg width="15" height="7" viewBox="0 0 15 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line y1="0.5" x2="15" y2="0.5" stroke="white" />
+                        <line y1="3.5" x2="15" y2="3.5" stroke="white" />
+                        <line y1="6.5" x2="15" y2="6.5" stroke="white" />
+                    </svg>
+                </button>
                 <ul class="menu">
                     <li class="menu-item">
                         <a href="#" class="menu-link">Главная</a>
@@ -62,22 +70,24 @@
                 </div>
             </div>
             <!-- /.film-info -->
-            <a href="#" class="film-trailer"><svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="50" fill="white"/>
+            <a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=z2X2HaTvkl8" href="#" class="film-trailer"><svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="50" fill="white" />
                 <g clip-path="url(#clip0)">
-                <path d="M43.0758 30.0033C39.3071 27.8416 36.2518 29.6125 36.2518 33.9556V66.0059C36.2518 70.3533 39.3071 72.1219 43.0758 69.9623L71.0893 53.8967C74.8592 51.7342 74.8592 48.2306 71.0893 46.0686L43.0758 30.0033Z" fill="#F20D01"/>
+                    <path
+                        d="M43.0758 30.0033C39.3071 27.8416 36.2518 29.6125 36.2518 33.9556V66.0059C36.2518 70.3533 39.3071 72.1219 43.0758 69.9623L71.0893 53.8967C74.8592 51.7342 74.8592 48.2306 71.0893 46.0686L43.0758 30.0033Z"
+                        fill="#F20D01" />
                 </g>
                 <defs>
-                <clipPath id="clip0">
-                <rect width="41.8013" height="41.8013" fill="white" transform="translate(34.1837 29.0816)"/>
-                </clipPath>
+                    <clipPath id="clip0">
+                        <rect width="41.8013" height="41.8013" fill="white" transform="translate(34.1837 29.0816)" />
+                    </clipPath>
                 </defs>
                 </svg>
-                </a>
+            </a>
         </div>
         <!-- /.film -->
         <div class="session container">
-            <div class="-session-date">
+            <div class="session-date">
                 <span class="session-label">Дата</span>
                 <div class="session-date-block">
                     <div class="session-date-item">
@@ -103,7 +113,7 @@
                 </div>
             </div>            
             <!-- /.date -->
-            <div class="session-cineme">
+            <div class="session-cinema">
                 <span class="session-label">Кинотеатр</span>
                 <select class="select select-cinema" name="cinema">
                     <option value="Октябрь, ул. Калужская 28">Октябрь, ул. Калужская 28</option>
@@ -125,7 +135,10 @@
         </div>
     </header>
     <div class="scheme container">
-        <svg class="scheme-svg" width="1170" height="600" viewBox="0 0 1170 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="scheme-svg" 
+            viewBox="0 0 1170 600" 
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg">
             <path class="light" d="M128 115L201.04 48H968.96L1042 115H128Z" fill="url(#paint0_linear)" />
             <line x1="76" y1="43" x2="1094" y2="43" stroke="black" stroke-opacity="0.39" stroke-width="10" />
             <path
@@ -459,7 +472,7 @@
                 <span class="legend-text">Свободно</span>
             </div>
             <div class="legend-active legend-label">
-                <svg width="38" height="32" viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg  viewBox="0 0 38 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         class="active"
                         d="M10.8906 1C7.57692 1 4.89062 3.68629 4.89062 7V20C4.89062 23.3137 7.57692 26 10.8906 26H26.8906C30.2043 26 32.8906 23.3137 32.8906 20V7C32.8906 3.68629 30.2043 1 26.8906 1H10.8906Z" />
@@ -481,12 +494,13 @@
         <div class="price-tag">
             <span class="price-label">Всего к оплате</span>
             <span class="price-total">0</span>
-            <span class="ruble">₽</span>
+            <span class="">₽</span>
         </div>
         <!-- /.price-tag -->
         <a href="#" class="button button-pay">Перейти к оплате</a>
     </div>
     <!-- /.price -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
